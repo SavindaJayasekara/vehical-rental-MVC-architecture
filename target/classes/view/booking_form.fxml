@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="contextBookingPane" prefHeight="700.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ikmanRental.controller.BookingFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="915.0" layoutX="89.0" layoutY="77.0" opacity="0.71" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/booking2.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblBill" layoutX="32.0" layoutY="411.0" opacity="0.85" prefHeight="276.0" prefWidth="845.0">
+        <columns>
+          <TableColumn fx:id="colBookingID" prefWidth="92.0" text="Booking ID" />
+          <TableColumn fx:id="colDriverNic" prefWidth="102.0" text="Driver NIC" />
+            <TableColumn fx:id="colStatus" minWidth="0.3333282470703125" prefWidth="66.0" text="Status" />
+            <TableColumn fx:id="colCost" prefWidth="79.0" text="Cost" />
+            <TableColumn fx:id="colRequiredDate" prefWidth="95.0" text="Requred Date" />
+            <TableColumn fx:id="colDistance" prefWidth="73.66668701171875" text="Distance" />
+            <TableColumn fx:id="colVehicleNumber" prefWidth="110.33331298828125" text="Vehicle NUmber" />
+            <TableColumn fx:id="colRideTo" minWidth="0.3333282470703125" prefWidth="127.6666259765625" sortType="DESCENDING" text="Ride to" />
+            <TableColumn fx:id="colCustomerNic" minWidth="0.3333282470703125" prefWidth="99.66668701171875" text="Customer NIC" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="30.0" fitWidth="164.0" layoutX="390.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/ikman%20Bookings.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="10.0" layoutY="2.0" text="Booking ID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBooking" layoutX="130.0" layoutY="2.0" prefHeight="25.0" prefWidth="105.0" text="llllllllllllllllllllll" textFill="#181fff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="20.0" text="BillID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBillID" layoutX="130.0" layoutY="20.0" prefHeight="25.0" prefWidth="105.0" text="llllllllllllllllllllll" textFill="#181fff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="38.0" text="PaymentID :">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentID" layoutX="130.0" layoutY="38.0" prefHeight="25.0" prefWidth="105.0" text="llllllllllllllllllllll" textFill="#181fff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="36.0" layoutY="99.0" prefHeight="305.0" prefWidth="838.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabPane1" closable="false" disable="true" text="Step 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="317.0" prefWidth="679.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="276.0" fitWidth="838.0" pickOnBounds="true" preserveRatio="true" />
+                        <ComboBox id="glass" fx:id="cmbVehicle" layoutX="33.0" layoutY="148.0" onAction="#cmbVehicleOnAction" prefHeight="25.0" prefWidth="148.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="33.0" layoutY="124.0" text="Choose vehicle">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="glass" fx:id="cmbVehicleNumber" layoutX="33.0" layoutY="233.0" prefHeight="25.0" prefWidth="148.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="33.0" layoutY="207.0" text="Select Vehicle">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="295.0" layoutY="123.0" text="Select customer">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="glass" fx:id="cmbCustomerNic" layoutX="291.0" layoutY="148.0" onAction="#cmbCustomerNicOnAction" prefHeight="25.0" prefWidth="148.0" stylesheets="@../sheet/stylesheet.css" />
+                        <DatePicker id="bevel" fx:id="datePicer" layoutX="33.0" layoutY="58.0" onAction="#datePicerOnAction" prefHeight="25.0" prefWidth="148.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="37.0" layoutY="36.0" text="Required Date">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="295.0" layoutY="208.0" text="Select Driver">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="glass" fx:id="cmbCustomerDriverNic" layoutX="291.0" layoutY="233.0" onAction="#cmbDriverNicOnAction" prefHeight="25.0" prefWidth="148.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label fx:id="lblDriverName" layoutX="462.0" layoutY="236.0" prefHeight="20.0" prefWidth="84.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCustomerName" layoutX="528.0" layoutY="151.0" prefHeight="20.0" prefWidth="84.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="glass" fx:id="cmbBookingStatus" layoutX="291.0" layoutY="57.0" prefHeight="25.0" prefWidth="148.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="291.0" layoutY="35.0" text="Booking Status">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="bevel" fx:id="btnNext1" layoutX="745.0" layoutY="241.0" onMouseClicked="#btnNext1Clicked" prefHeight="30.0" prefWidth="70.0" stylesheets="@../sheet/myedit.css" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton id="glass" fx:id="btnDelete" layoutX="664.0" layoutY="241.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #51baf5;" stylesheets="@../sheet/stylesheet.css" text="Delete" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <ComboBox fx:id="cmbBookingID" layoutX="601.0" layoutY="57.0" onAction="#cmbBookingIDOnAction" prefWidth="150.0" visible="false" />
+                        <Label fx:id="lblChooseBookingId" layoutX="601.0" layoutY="35.0" text="Choose Booking ID" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDate" layoutX="33.0" layoutY="83.0" prefHeight="17.0" prefWidth="124.0" />
+                        <JFXButton fx:id="btnNewCustomer" buttonType="RAISED" layoutX="454.0" layoutY="148.0" onAction="#btnNewCustomerOnAction" prefHeight="25.0" prefWidth="64.0" style="-fx-background-color: #51baf5;" text="NEW" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabPane2" disable="true" text="Step 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="683.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="135.0" fitWidth="134.0" layoutX="123.0" layoutY="67.0" onMouseClicked="#imgMapClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <image>
+                              <Image url="@../assets/map.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="50.0" layoutY="36.0" text="Find your tuar Distance in googleMap">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="118.0" text="Click hear -&gt;" />
+                        <TextField id="bevel" fx:id="txtplace1" layoutX="336.0" layoutY="112.0" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-width: 0 0 3 0; -fx-border-color: black;" stylesheets="@../sheet/stylesheet.css" />
+                        <TextField id="bevel" fx:id="txtPlace2" layoutX="479.0" layoutY="112.0" onAction="#txtPlace2OnAction" prefHeight="30.0" prefWidth="104.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-width: 0 0 3 0; -fx-border-color: black;" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="449.0" layoutY="115.0" text="To">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="bevel" fx:id="btnNext2" layoutX="742.0" layoutY="241.0" onMouseClicked="#btnNext2Clicked" prefHeight="30.0" prefWidth="64.0" stylesheets="@../sheet/myedit.css" text="Next" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton id="bevel" fx:id="btnBack1" layoutX="756.0" layoutY="14.0" onMouseClicked="#btnBackClicked" prefHeight="30.0" prefWidth="68.0" stylesheets="@../sheet/myedit.css" text="&lt;-">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <Label layoutX="336.0" layoutY="89.0" text="Start Place" />
+                        <Label layoutX="479.0" layoutY="89.0" text="Drop Place" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabPane3" disable="true" text="Step 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="572.0" style="-fx-background-color: white;">
+                     <children>
+                        <TextField id="bevel" fx:id="txtDistance" layoutX="160.0" layoutY="92.0" onAction="#txtDistanceOnAction" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-width: 0 0 3 0; -fx-border-color: black;" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Enter your search distance and calculate detail">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="210.0" fitWidth="286.0" layoutX="358.0" layoutY="44.0" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/boardBooking.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="63.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="input distance after press " />
+                        <Text fill="RED" layoutX="207.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="376.0" layoutY="63.0" text="Distance :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="376.0" layoutY="181.0" text=" Total Cost :" textFill="#ff2020">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Text fill="RED" layoutX="217.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="nter">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Label layoutX="376.0" layoutY="94.0" text="Fuel :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imgbtnHome" fitHeight="71.0" fitWidth="161.0" layoutX="656.0" layoutY="226.0" onMouseClicked="#addBookingClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: hand;">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../assets/addbookingbtn2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="376.0" layoutY="154.0" text="Driver Payement :">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="376.0" layoutY="124.0" text="Vehicle Cost">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDistance" layoutX="471.0" layoutY="63.0" prefHeight="17.0" prefWidth="122.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFual" layoutX="432.0" layoutY="94.0" prefHeight="17.0" prefWidth="122.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCos" layoutX="492.0" layoutY="125.0" prefHeight="17.0" prefWidth="122.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDriverPayament" layoutX="516.0" layoutY="154.0" prefHeight="25.0" prefWidth="98.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotelCost" layoutX="493.0" layoutY="181.0" prefHeight="25.0" prefWidth="98.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField id="bevel" fx:id="txtHours" layoutX="53.0" layoutY="92.0" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-width: 0 0 3 0; -fx-border-color: black;" stylesheets="@../sheet/stylesheet.css" />
+                        <JFXButton id="bevel" fx:id="btnBack2" layoutX="758.0" layoutY="12.0" onMouseClicked="#btnBack2Clicked" prefHeight="30.0" prefWidth="66.0" stylesheets="@../sheet/myedit.css" text="&lt;-">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <Label layoutX="53.0" layoutY="67.0" text="Hours" />
+                        <Label layoutX="161.0" layoutY="67.0" text="Distance" />
+                        <JFXButton id="bevel" fx:id="btnUpdate" layoutX="749.0" layoutY="240.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="68.0" stylesheets="@../sheet/myedit.css" text="Update" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <JFXButton id="glass" fx:id="btnNew" layoutX="822.0" layoutY="63.0" onAction="#btnNewOnAction" stylesheets="@../sheet/stylesheet.css" text="+ New" />
+      <JFXButton id="glass" fx:id="btnSearchAndEdit" layoutX="715.0" layoutY="63.0" onAction="#btnSearchAndEditONAction" stylesheets="@../sheet/stylesheet.css" text="Search and Edit" />
+   </children>
+</AnchorPane>

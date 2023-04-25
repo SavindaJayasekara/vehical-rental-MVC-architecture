@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="registerPane" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ikmanRental.controller.RegisterFormController">
+   <children>
+      <ImageView fitHeight="715.0" fitWidth="1254.0" layoutX="-10.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-10.0" AnchorPane.topAnchor="-12.0">
+         <image>
+            <Image url="@../assets/registerNew.png" />
+         </image>
+      </ImageView>
+      <CubicCurve fx:id="curve" controlX1="-121.24956512451172" controlX2="-2.7322745323181152" controlY1="-42.84817886352539" controlY2="25.705947875976562" endX="7.926955699920654" endY="116.561767578125" layoutX="902.0" layoutY="170.0" onMouseExited="#rootOnMouseExited" onMouseMoved="#rootOnMouseMove" opacity="0.35" rotate="-26.6" startX="-215.6734161376953" startY="1.4152511358261108" stroke="BLACK" strokeWidth="0.0" AnchorPane.leftAnchor="685.8265838623047" AnchorPane.rightAnchor="296.6737518310547">
+         <fill>
+            <LinearGradient endX="1.0" endY="0.2606635071090047" startY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3530701696872711" green="0.6068713665008545" blue="0.8289473652839661" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.11409395973154363">
+                     <color>
+                        <Color red="0.3530701696872711" green="0.6068713665008545" blue="0.8289473652839661" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7407407164573669" green="0.874691367149353" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </CubicCurve>
+      <ImageView fx:id="imgHome" fitHeight="54.0" fitWidth="52.0" layoutX="1139.0" layoutY="9.0" onMouseClicked="#imgHomeOnAction" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/back.png" />
+         </image>
+      </ImageView>
+      <Button id="blue" fx:id="btnRegister" layoutX="731.0" layoutY="588.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #5983Fc;" stylesheets="@../sheet/stylesheet.css" text="Register" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField id="bevel" fx:id="txtFirstname" layoutX="600.0" layoutY="196.0" style="-fx-border-color: black; -fx-background-color: TRANSPARENT; -fx-border-width: 1 1 1 1; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../sheet/stylesheet.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <TextField id="bevel" fx:id="txtLastName" layoutX="848.0" layoutY="198.0" style="-fx-border-color: black; -fx-background-color: TRANSPARENT; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1 1 1 1;" stylesheets="@../sheet/stylesheet.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="600.0" layoutY="162.0" text="First Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="848.0" layoutY="164.0" text="Last Name">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField id="bevel" fx:id="txtGmail" layoutX="596.0" layoutY="295.0" prefHeight="31.0" prefWidth="290.0" style="-fx-border-color: black; -fx-background-color: TRANSPARENT; -fx-border-width: 1 1 1 1; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../sheet/stylesheet.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="596.0" layoutY="256.0" text="Your Email">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="596.0" layoutY="443.0" text="Password">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="841.0" layoutY="443.0" text="Confierm Password">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <PasswordField id="bevel" fx:id="txtPasswor" layoutX="596.0" layoutY="494.0" style="-fx-border-color: black; -fx-background-color: TRANSPARENT; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1 1 1 1;" stylesheets="@../sheet/stylesheet.css" />
+      <PasswordField id="bevel" fx:id="txtConfiermPassword" layoutX="841.0" layoutY="494.0" onKeyTyped="#txtconfiermKerTyped" style="-fx-border-color: black; -fx-background-color: TRANSPARENT; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 1 1 1 1;" stylesheets="@../sheet/stylesheet.css" />
+      <TextField id="bevel" fx:id="txtNIC" layoutX="596.0" layoutY="388.0" prefHeight="31.0" prefWidth="290.0" style="-fx-border-color: black; -fx-background-color: TRANSPARENT; -fx-border-width: 1 1 1 1; -fx-background-radius: 10; -fx-border-radius: 10;" stylesheets="@../sheet/stylesheet.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="596.0" layoutY="346.0" text="NIC">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="151.0" fitWidth="170.0" layoutX="442.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../assets/register_icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="148.0" layoutY="147.0" text="Welcome !">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font></Label>
+      <Label layoutX="142.0" layoutY="256.0" text="from earning your own">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="236.0" text="You are 30 seconds away">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="187.0" layoutY="280.0" text="money!">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

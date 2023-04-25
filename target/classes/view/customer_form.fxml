@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextCustomerPane" prefHeight="700.0" prefWidth="915.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ikmanRental.controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="915.0" layoutX="1.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/customerBackground.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="45.0" layoutY="336.0" prefHeight="337.0" prefWidth="819.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Customer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="331.0" fitWidth="823.0" layoutX="-2.0" layoutY="-7.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/customerAdd.png" />
+                           </image>
+                        </ImageView>
+                        <TextField id="bevel" fx:id="txtName" layoutX="44.0" layoutY="80.0" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="bevel" fx:id="txtNic" layoutX="306.0" layoutY="80.0" onKeyTyped="#txtNicTypedOnAction" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="bevel" fx:id="txtContact" layoutX="44.0" layoutY="200.0" onKeyTyped="#txtContactTypedOnAction" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="bevel" fx:id="txtGmail" layoutX="306.0" layoutY="200.0" onKeyTyped="#txtGmailTypedOnAction" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="44.0" layoutY="60.0" text="Name">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="306.0" layoutY="60.0" text="NIC">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="44.0" layoutY="180.0" text="Contact">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="306.0" layoutY="180.0" text="g-mail">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="bevel" fx:id="btnAdd" layoutX="700.0" layoutY="256.0" onAction="#btnAddOnActon" prefHeight="33.0" prefWidth="90.0" stylesheets="@../sheet/myedit.css" text="Add">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Edit Customer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="341.0">
+                     <children>
+                        <ImageView fitHeight="315.0" fitWidth="873.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/customerdelete.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="364.0" layoutY="145.0" text="Choose NIC">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="glass" fx:id="cmbCustomerNic" layoutX="467.0" layoutY="141.0" onAction="#cmdCustomerOnAction" prefWidth="150.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="45.0" layoutY="61.0" text="Name :">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="145.0" text="Contact :">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="41.0" layoutY="223.0" text="g-mail :">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="bevel" fx:id="btnUpdate" layoutX="699.0" layoutY="260.0" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="110.0" stylesheets="@../sheet/myedit.css" text="Update">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton id="bevel" fx:id="btnDelete" layoutX="584.0" layoutY="260.0" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="110.0" stylesheets="@../sheet/myedit.css" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <TextField id="bevel" fx:id="txteditName" layoutX="120.0" layoutY="57.0" stylesheets="@../sheet/stylesheet.css" />
+                        <TextField id="bevel" fx:id="txtEditContact" layoutX="120.0" layoutY="142.0" stylesheets="@../sheet/stylesheet.css" />
+                        <TextField id="bevel" fx:id="txtEditGmail" layoutX="117.0" layoutY="219.0" prefHeight="25.0" prefWidth="197.0" stylesheets="@../sheet/stylesheet.css" />
+                        <ImageView fitHeight="180.0" fitWidth="144.0" layoutX="634.0" layoutY="52.0" opacity="0.73" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/svgcustomet.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="347.0" layoutY="61.0" text="Select Customer NIC number and edit and update" />
+                        <Label fx:id="lblNic" alignment="CENTER" contentDisplay="CENTER" layoutX="426.0" layoutY="172.0" prefHeight="17.0" prefWidth="233.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="tbtCustomer" layoutX="37.0" layoutY="70.0" prefHeight="250.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="68.0" text="Name" />
+          <TableColumn fx:id="colNIC" prefWidth="117.0" text="NIC" />
+            <TableColumn fx:id="colContact" prefWidth="108.0" text="Contact" />
+            <TableColumn fx:id="colGmail" prefWidth="173.0" text="Gmail" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="28.0" fitWidth="182.0" layoutX="390.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/ikman%20Customers.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

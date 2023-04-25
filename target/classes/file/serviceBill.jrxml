@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="serviceBill" pageWidth="280" pageHeight="450" columnWidth="240" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1345ade-a470-4122-b71b-6cb5c3b73b1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="bookingId" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from billing where BookingID= $P{bookingId}]]>
+	</queryString>
+	<field name="BillID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BillID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="BookingID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BookingID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="CustomerNIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CustomerNIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="DriverNIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DriverNIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="Cost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="VehicleNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="VehicleNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="40" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="-10" width="215" height="30" uuid="30c35834-befd-49ba-b363-1e4e1492ec41"/>
+				<textElement>
+					<font size="22" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ikman rental service]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="30" width="280" height="1" uuid="18fbdd11-6b3b-43fd-8945-f95442666f9f"/>
+			</line>
+			<line>
+				<reportElement x="12" y="20" width="215" height="1" uuid="3e8c9644-93e7-43a7-b867-58d12ac99360"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="0" width="120" height="25" uuid="8d40fa82-640c-4477-80c1-2b9b4b33e07a"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Service Ditail !]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="221" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="10" width="130" height="30" uuid="976c4cb8-447a-4ff2-ae4a-b7f49d3e60f3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4580c35-97fd-48b9-9e29-27053b40cc35"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BillID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="41" width="130" height="30" uuid="76adf23b-e8db-4bba-85a5-b350372ca575">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93dc072a-6c1e-4ae5-a10a-910158da1be7"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BookingID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="70" width="130" height="30" uuid="fe6a993f-b9b7-46f4-b899-ea20d9ced604">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="836ae14a-7dea-4a4c-887d-0525b93cc667"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CustomerNIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="101" width="130" height="30" uuid="210416d6-92c0-444b-8920-86d2410e30d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3e62a48-9c34-4cb0-918a-07550a01415c"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DriverNIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="190" width="130" height="30" uuid="acf0804f-a4a1-4871-b38b-9e5cb58dce25">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7fcf05f0-77e7-4f30-920f-8dfea2edfe52"/>
+				</reportElement>
+				<textElement>
+					<font size="13" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="161" width="130" height="30" uuid="a8336588-807d-413a-9d36-4e959baff3c7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7915d456-5929-49de-9e85-fd9b8df02817"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VehicleNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="130" width="130" height="30" uuid="03d52373-88e1-4580-aa82-3491abd9fa99">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ac91db1-8993-4dad-9ccb-02896b6151b0"/>
+				</reportElement>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="45" height="30" uuid="420bbb23-4287-4dcf-9590-c42df0161f2e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4580c35-97fd-48b9-9e29-27053b40cc35"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="41" width="80" height="30" uuid="df7cc12f-865a-4e1a-b0cf-1c22474f234d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="93dc072a-6c1e-4ae5-a10a-910158da1be7"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="90" height="30" uuid="3cb17130-3a9f-4da0-9b45-5e53036cd87d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="836ae14a-7dea-4a4c-887d-0525b93cc667"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="101" width="70" height="30" uuid="97a2a438-3af7-4bd4-be67-4390b7127e3a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d3e62a48-9c34-4cb0-918a-07550a01415c"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Driver NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="191" width="65" height="30" uuid="4201da26-48e4-4b7d-8fcc-c862d3286285">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7fcf05f0-77e7-4f30-920f-8dfea2edfe52"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="161" width="110" height="30" uuid="b1a2611c-8ff6-4d85-9e2f-d8faa6b42df3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7915d456-5929-49de-9e85-fd9b8df02817"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="65" height="30" uuid="68b8b6d4-96fd-4f3f-a7cf-2981632f782f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ac91db1-8993-4dad-9ccb-02896b6151b0"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="0" width="280" height="1" uuid="5c233554-abb1-48c0-933c-dd828aa5d7f9"/>
+			</line>
+			<line>
+				<reportElement x="-20" y="220" width="280" height="1" uuid="8cb4805d-801c-4f4a-afd5-98254e4200b1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="20" width="70" height="20" uuid="78f68759-3e40-4342-8e9a-789457151c71"/>
+				<text><![CDATA[Welcome Back !]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement x="-7" y="0" width="255" height="19" uuid="ac26d5e4-3731-47e7-a8f5-a0c4ff4c6f60"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[@ all the best service in sri Lanka for a factorys]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="30" splitType="Stretch"/>
+	</summary>
+</jasperReport>

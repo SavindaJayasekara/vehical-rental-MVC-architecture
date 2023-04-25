@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ikmanRental.controller.DashBordController">
+   <children>
+      <AnchorPane fx:id="manePane" layoutX="285.0" layoutY="-10.0" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imgTranslte" fitHeight="41.0" fitWidth="66.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../assets/lorrytrans.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <ImageView fitHeight="700.0" fitWidth="433.0" layoutX="-15.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="-15.0" AnchorPane.rightAnchor="913.480224609375" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../assets/controller.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2278c3" height="20.0" layoutX="-28.0" layoutY="693.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="928.0" AnchorPane.topAnchor="690.0" />
+      <ImageView fx:id="imgbtnHome" fitHeight="74.0" fitWidth="227.0" layoutX="30.0" layoutY="180.0" onMouseClicked="#homeClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../assets/homebutton2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgbtnHome1" fitHeight="74.0" fitWidth="227.0" layoutX="30.0" layoutY="480.0" onMouseClicked="#driverklicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../assets/driver2.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgbtnHome2" fitHeight="74.0" fitWidth="227.0" layoutX="30.0" layoutY="580.0" onMouseClicked="#vehicleclicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../assets/vehicolicon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgbtnHome3" fitHeight="54.0" fitWidth="67.0" layoutX="110.0" layoutY="81.0" onMouseClicked="#detailClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../assets/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgbtnHome21" fitHeight="74.0" fitWidth="227.0" layoutX="30.0" layoutY="280.0" onMouseClicked="#bookingclicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../assets/booking.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="9.0" layoutY="664.0" prefHeight="17.0" prefWidth="269.0" text="\@see the analiytics and grow your data remotely ." textFill="WHITE" />
+      <ImageView fx:id="imgCustomer" fitHeight="74.0" fitWidth="227.0" layoutX="30.0" layoutY="380.0" onMouseClicked="#customerClicked" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+         <image>
+            <Image url="@../assets/btnCustomer.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

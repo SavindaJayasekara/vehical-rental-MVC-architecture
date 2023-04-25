@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="newfile" pageWidth="400" pageHeight="842" columnWidth="360" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c190d30-ae45-4379-8276-090b2737e617">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="bookingID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[001]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Parameter1" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM billing 
+WHERE bookingID= $P{Parameter1} ]]>
+	</queryString>
+	<field name="BillID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BillID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="BookingID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BookingID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="CustomerNIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CustomerNIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="DriverNIC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="DriverNIC"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="Cost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Cost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="VehicleNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="VehicleNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="billing"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="175" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="54" height="30" uuid="516db80c-cc2f-4c22-aa1b-5c373c93174c"/>
+				<textFieldExpression><![CDATA[$F{BillID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="51" height="30" uuid="811b5392-e8cb-4c55-8694-234b63468b5d"/>
+				<textFieldExpression><![CDATA[$F{BookingID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="0" width="51" height="30" uuid="5fcdc653-830c-4e4c-9842-4535b546d65a"/>
+				<textFieldExpression><![CDATA[$F{CustomerNIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="51" height="30" uuid="fb063de1-4948-4377-8747-29255561253f"/>
+				<textFieldExpression><![CDATA[$F{DriverNIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="0" width="51" height="30" uuid="36dddef0-e740-466a-b173-3727d15aa663"/>
+				<textFieldExpression><![CDATA[$F{Cost}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="258" y="0" width="51" height="30" uuid="4cb2c57e-1ccb-4f21-8ac7-d830a36cc1c9"/>
+				<textFieldExpression><![CDATA[$F{VehicleNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="0" width="51" height="30" uuid="2f8dbb8f-8ec4-4f4a-9720-746745d2fe48"/>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="19" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

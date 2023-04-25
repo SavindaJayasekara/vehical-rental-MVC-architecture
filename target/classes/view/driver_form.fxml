@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextDriverPane" prefHeight="700.0" prefWidth="915.0" style="-fx-background-color: EBF1FB;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ikmanRental.controller.DriverFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="915.0" layoutX="65.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/driverinterface.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="298.0" layoutY="61.0" prefHeight="269.0" prefWidth="556.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Drivers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblDriver" layoutX="1.0" layoutY="-1.0" prefHeight="251.0" prefWidth="556.0">
+                           <columns>
+                              <TableColumn fx:id="colName" prefWidth="113.0" text="Name" />
+                              <TableColumn fx:id="colNic" prefWidth="118.0" text="NIC" />
+                              <TableColumn fx:id="colGender" text="Gender" />
+                              <TableColumn fx:id="colGmail" prefWidth="157.0" text="Gmail" />
+                              <TableColumn fx:id="colStatus" prefWidth="100.0" text="Satatus" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Driver Payment">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblPayment" layoutX="66.0" layoutY="20.0" prefHeight="239.0" prefWidth="556.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="colPaymentID" prefWidth="130.0" text="Payament ID" />
+                            <TableColumn fx:id="colStatusP" prefWidth="137.0" text="Status" />
+                              <TableColumn fx:id="colTotalP" prefWidth="150.0" text="Payament total" />
+                              <TableColumn fx:id="colDriverNicP" prefWidth="138.0" text="Driver NIC" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TabPane layoutX="43.0" layoutY="340.0" prefHeight="339.0" prefWidth="821.0" style="-fx-background-color: white; -fx-background-radius: 30; -fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Add Drivers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fitHeight="331.0" fitWidth="823.0" layoutX="-2.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/drivertab2.png" />
+                           </image>
+                        </ImageView>
+                        <TextField id="bevel" fx:id="txtName" layoutX="44.0" layoutY="80.0" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="bevel" fx:id="txtNic" layoutX="331.0" layoutY="80.0" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField id="bevel" fx:id="txtGmail" layoutX="44.0" layoutY="203.0" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="44.0" layoutY="52.0" text="Name">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="336.0" layoutY="52.0" text="NIC">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="175.0" text="g-mail">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="bevel" fx:id="btnAdd" layoutX="709.0" layoutY="268.0" onAction="#btnAddOnAction" prefHeight="33.0" prefWidth="86.0" stylesheets="@../sheet/myedit.css" text="Add">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <ComboBox id="glass" fx:id="cmdGender" layoutX="592.0" layoutY="78.0" prefHeight="30.0" prefWidth="175.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="592.0" layoutY="60.0" text="Gender">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="336.0" layoutY="175.0" text="Status">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField id="bevel" fx:id="txtStatus" layoutX="339.0" layoutY="203.0" stylesheets="@../sheet/stylesheet.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Edit Drivers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="265.0" prefWidth="341.0">
+                     <children>
+                        <ImageView fitHeight="318.0" fitWidth="844.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/customerAdd.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="316.0" layoutY="56.0" text="Choose NIC">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox id="glass" fx:id="cmbNic" layoutX="316.0" layoutY="83.0" onAction="#cmbNicOnAction" prefWidth="150.0" stylesheets="@../sheet/myedit.css" />
+                        <Label layoutX="51.0" layoutY="51.0" text="Name :">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="128.0" text="g-mail :">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton id="bevel" fx:id="btnUpdate" layoutX="699.0" layoutY="263.0" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="110.0" stylesheets="@../sheet/myedit.css" text="Update">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <JFXButton id="bevel" fx:id="btnDelete" layoutX="580.0" layoutY="263.0" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="110.0" stylesheets="@../sheet/myedit.css" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></JFXButton>
+                        <TextField id="bevel" fx:id="txteditName" layoutX="50.0" layoutY="78.0" stylesheets="@../sheet/stylesheet.css" />
+                        <TextField id="bevel" fx:id="txtEditGmail" layoutX="50.0" layoutY="154.0" stylesheets="@../sheet/stylesheet.css" />
+                        <TextField id="bevel" fx:id="txtEditStatus" layoutX="144.0" layoutY="226.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="144.0" layoutY="199.0" text="Status :">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="479.0" layoutY="111.0" text="Select Driver NIC after Edit Drivers" />
+                        <ComboBox id="glass" fx:id="cmbEditGender" layoutX="316.0" layoutY="159.0" prefWidth="150.0" stylesheets="@../sheet/stylesheet.css" />
+                        <Label layoutX="316.0" layoutY="133.0" text="Gender">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblDelete" alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="111.0" prefHeight="17.0" prefWidth="132.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <ImageView fitHeight="28.0" fitWidth="182.0" layoutX="390.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/ikman%20Drivers.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
